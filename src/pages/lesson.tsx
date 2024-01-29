@@ -32,12 +32,19 @@ const lessonProblem1 = {
 
 const lessonProblem2 = {
   type: "WRITE_IN_ENGLISH",
+  question: "El perro",
+  answerTiles: ["woman", "dog", "cat", "I", "The", "boy", "or"],
+  correctAnswer: [4, 1],
+} as const;
+
+const lessonProblem3 = {
+  type: "WRITE_IN_ENGLISH",
   question: "El niño",
   answerTiles: ["woman", "milk", "water", "I", "The", "boy"],
   correctAnswer: [4, 5],
 } as const;
 
-const lessonProblems = [lessonProblem1, lessonProblem2];
+const lessonProblems = [lessonProblem1, lessonProblem2, lessonProblem3];
 
 const numbersEqual = (a: readonly number[], b: readonly number[]): boolean => {
   return a.length === b.length && a.every((_, i) => a[i] === b[i]);
